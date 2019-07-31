@@ -32,5 +32,12 @@ dependencies {
     //跨页面传递值
     implementation 'org.greenrobot:eventbus:3.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0-beta01'
+    implementation ('com.lcodecorex:tkrefreshlayout:1.0.7'){
+//        exclude module: 'support-v4'
+        exclude group: 'com.android.support'
+    }
+    //网络请求
+    implementation 'com.lzy.net:okgo:3.0.4'
+
 
 }

@@ -2,9 +2,11 @@ package com.dashan.apptest.mvp;
 
 public class MvpContract {
     interface Presenter{
-        void LoadData();
+        void initListView();
+
+        void updateList();
     }
     interface  View{
-        void onDataLoad(String s);
+        void initListView(MvpAdapter adapter);
     }
 }

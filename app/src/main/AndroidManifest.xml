@@ -10,28 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".test.Test2Activity"
-            android:label="@string/title_activity_test2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".test.TestAPPActivity"
-            android:label="@string/title_activity_test_app"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".tab_viewpager.TabActivity"
             android:label="@string/title_activity_tab">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".viewapger.PageViewActivity" />
         <activity android:name=".recycler.ListActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".evenbus.EvenBus2Activity" />
         <activity android:name=".evenbus.EvenBus1Activity" />
-        <activity android:name=".mvp.MvpActivity" />
+        <activity android:name=".mvp.MvpActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

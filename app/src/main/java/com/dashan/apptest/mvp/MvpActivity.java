@@ -1,27 +1,27 @@
 package com.dashan.apptest.mvp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
-import android.widget.TextView;
-
 import com.dashan.apptest.R;
+import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 
 public class MvpActivity extends AppCompatActivity implements MvpContract.View {
-    TextView tv;
     private MvpPrestener prestener;
+    private RecyclerView lvshow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvp);
-        tv = findViewById(R.id.main_tv);
+        lvshow = findViewById(R.id.main_lv);
         prestener = new MvpPrestener(this);
 
 
     }
 
+
     @Override
-    public void onDataLoad(String s) {
-        tv.setText(s);
+    public void initListView(MvpAdapter adapter) {
+        lvshow.setAdapter(adapter);
     }
 }
